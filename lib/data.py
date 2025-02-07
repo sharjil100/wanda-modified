@@ -38,10 +38,10 @@ def get_wikitext2(nsamples, seed, seqlen, tokenizer):
 # Load and process c4 dataset
 def get_c4(nsamples, seed, seqlen, tokenizer):
     # Load train and validation datasets
-    traindata = load_dataset('allenai/c4', 'en', split='train')
-    valdata = load_dataset('allenai/c4', 'en', split='validation')
+    traindata = load_dataset('allenai/c4', 'en', split='train', disable_tqdm=True)
+    valdata = load_dataset('allenai/c4', 'en', split='validation', disable_tqdm=True)
 
-    # Generate samples from training set
+ # Generate samples from training set
     random.seed(seed)
     trainloader = []
     for _ in range(nsamples):
