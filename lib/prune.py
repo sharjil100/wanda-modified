@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn 
 from .sparsegpt import SparseGPT 
 from .layerwrapper import WrappedGPT
-from .data import get_loaders 
+from lib.data import get_loaders 
 
 from .ablate import AblateGPT 
 
